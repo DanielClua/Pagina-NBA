@@ -29,42 +29,37 @@ Conferencia Este: En aquetsa pagina es troba informació sobre 4 equips diferent
 
 Conferencia Oeste: En aquetsa pagina es troba informació sobre 4 equips diferents sobre la Conferencia Oest de la Nba. Cadascun dels equips seleccionats tenen una footografia de el pabelló on juguen els partits els jugadors mes importants, i algunes dades sobre la franquicia, com per exemple el propietari el manager general i l'entrenador.
 ## Web responsive
-Explica cóm ha fet (alguna tècnica) per a que la seva web
-s’adapti a *diferents dispositius*. Resolució de les imatges, etc
+La tecnica que he utilitzat jo ha estat la seguent:
+#<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">#
+Amb aquest link que venia amb la plantilla que vaig seleccionar del W3.
+
+Una altra tecnica que he utilitzat ha estat per al menu, que a l'hora de fer la pagina web mes petita s'adaptés tota la pagina. Això ho he fet amb el codi de la plantilla seleccionada a W3 i que es el següent:
+
+<!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+    <a href="./objetivos.html" class="w3-bar-item w3-button">Objetivos</a>
+    <a href="./datos.html" class="w3-bar-item w3-button">Datos</a>
+    <a href="#pricing" class="w3-bar-item w3-button">Mapas</a>
+    <a href="./Conferecia Este.html" class="w3-bar-item w3-button">Conferencia Este</a>
+    <a href="./Conferecia Oeste.html" class="w3-bar-item w3-button">Conferencia Oeste</a>
+    <a href="./contact.html" class="w3-bar-item w3-button">Contacto</a>
+  </div>
+</div>
+
 ## Cartografia
-Cóm s’han integrat i elaborat els mapes que apareixen a la web.
+La cartografia realitzada s'ha integrat mitjançant un codi i-frame a la pagina web com per exemple el que es mostra a continuació:
+
+ <!-- Image of location/map -->
+  <div>
+    <iframe width="100%" height="500px" frameborder="0" scrolling="no" marginheight="0" 				marginwidth="0" src="./maps/segon_mapa/index.html" >
+    </iframe>
+</div>
+
+
 ## Dificultats/millores
 Reflexiona proactivament sobre el producte elaborat.
-   1. Primera dificultat
-   2. Segona dificultat
-   3. Tercera dificultat
-## Pregunta
-Respon a les preguntes de manera adient i utilitza el vocabulari tècnic
-necessari.
+   1. Primera dificultat: Entendre el codi i saber interpretarlo de forma correcta.
+   2. Segona dificultat: Fer la cartografia.
 
 
-### What is this repository for? ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
-
-### How do I get set up? ###
-
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
