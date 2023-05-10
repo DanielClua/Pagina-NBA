@@ -1,6 +1,6 @@
 
 # README
-A test repository for publishing my first web page is published at (https://danielclua.github.io/Pagina-Web).
+A test repository for publishing my first web page is published at (https://danielclua.github.io/Pagina-NBA/).
 
 ## Tema y motivación
 El objetivo de hacer mi página web sobre la NBA, es poder dar a conocer algunas de las diferentes franquicias de ambas conderencias, las ciudades donde se encuentran, los pabellones donde estas juegan, etc.
