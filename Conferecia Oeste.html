@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Custom styles -->
+<link rel="stylesheet" href="./css/custom-styles.css">
+
+</head>
+<body id="myPage">
+
+<!-- Sidebar on click -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-xxlarge" style="display:none;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-display-topright w3-text-indigo w3-text-indigo">Close
+    <i class="fa fa-remove"></i>
+  </a>
+  <a href="#" class="w3-bar-item w3-button">Link 1</a>
+  <a href="#" class="w3-bar-item w3-button">Link 2</a>
+  <a href="#" class="w3-bar-item w3-button">Link 3</a>
+  <a href="#" class="w3-bar-item w3-button">Link 4</a>
+  <a href="#" class="w3-bar-item w3-button">Link 5</a>
+</nav>
+
+<!-- Navbar -->
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="./index.html" class="w3-bar-item w3-button w3-hover-white"><i class="fa fa-home w3-margin-right"></i>Inicio</a>
+  <a href="./objetivos.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Objetivos</a>
+  <a href="./datos.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Datos</a>
+  <a href="./mapas.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Mapas</a>
+  <a href="./contact.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contacto</a>
+  <div class="w3-dropdown-hover w3-hide-small">
+    <button class="w3-button" title="Notifications">Conferencias <i class="fa fa-caret-down"></i></button>     
+    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+      <a href="./Conferecia Este.html" class="w3-bar-item w3-button w3-hover-white">Conferencia Este</a>
+      <a href="#" class="w3-bar-item w3-button w3-indigo">Conferencia Oeste</a>
+    </div>
+  </div>
+ </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+    <a href="./objetivos.html" class="w3-bar-item w3-button">Objetivos</a>
+    <a href="./datos.html" class="w3-bar-item w3-button">Datos</a>
+    <a href="./mapas.html" class="w3-bar-item w3-button">Mapas</a>
+    <a href="./Conferecia Este.html" class="w3-bar-item w3-button">Conferencia Este</a>
+    <a href="#" class="w3-bar-item w3-button">Conferencia Oeste</a>
+    <a href="./contact.html" class="w3-bar-item w3-button">Contacto</a>
+  </div>
+</div>
+
+<!-- Image Header -->
+<div class="w3-display-container w3-animate-opacity">
+  <img src="./images/lakers/LAKERS.jpg" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
+  <div class="w3-container w3-display-bottomleft w3-margin-bottom w3-margin-left w3-margin-right w3-theme-d2 dcs-image-header-caption">
+    <p>Crypto.com Arena</p>
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="id01" class="w3-modal">
+  <div class="w3-modal-content w3-card-4 w3-animate-top">
+    <header class="w3-container w3-indigo w3-display-container"> 
+      <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-indigo w3-display-topright"><i class="fa fa-remove"></i></span>
+      <h4>Oh snap! We just showed you a modal..</h4>
+      <h5>Because we can <i class="fa fa-smile-o"></i></h5>
+    </header>
+    <div class="w3-container">
+      <p>Cool huh? Ok, enough teasing around..</p>
+      <p>Go to our <a class="w3-text-indigo" href="/w3css/default.asp">W3.CSS Tutorial</a> to learn more!</p>
+    </div>
+    <footer class="w3-container w3-indigo">
+      <p>Modal footer</p>
+    </footer>
+  </div>
+</div>
+
+<!-- Team Container -->
+<div class="w3-container w3-padding-32 w3-center" id="team">
+<h2>Jugadores Importantes</h2>
+<p>Conoce al equipo:</p>
+
+<div class="w3-row"><br>
+
+<div class="w3-quarter">
+  <img src="./images/lakers/russell.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>D'Angelo Russell</h3>
+  <p>Base</p>
+</div>
+
+<div class="w3-quarter">
+  <img src="./images/lakers/reaves.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Austin Reaves</h3>
+  <p>Escolta</p>
+</div>
+
+<div class="w3-quarter">
+  <img src="./images/lakers/lebron.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>LeBron James</h3>
+  <p>Alero</p>
+</div>
+
+<div class="w3-quarter">
+    <img src="./images/lakers/davis.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+    <h3>Anthony Davis</h3>
+    <p>Pivot</p>
+  </div>
+
+</div>
+</div>
+
+<!-- Work Row -->
+<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
+
+<div class="w3-quarter">
+<h2>Franquicia</h2>
+<p>Los Angeles Lakers son un equipo profesional de baloncesto de los Estados Unidos con sede en Los Ángeles, California. Compiten en la División Pacífico de la Conferencia Oeste de la National Basketball Association (NBA) y disputan sus partidos como locales en el Crypto.com Arena, ubicado en el downtown de la ciudad. Campeones de la NBA en 17 ocasiones, están empatados en el palmarés de la NBA, con los Boston Celtics.</p>
+</div>
+
+<div class="w3-quarter">
+<div class="w3-card w3-white">
+  <img src="./images/lakers/jeannibus.png" alt="Snow" style="width:100%">
+  <div class="w3-container">
+  <h3>Propietaria</h3>
+  <h4>Jeanie Buss</h4>
+  <p>Nacida en Santa Monica el 26 de Septiebmre de 1961.Es una emprendedora y ejecutiva estadounidense.Es la propietaria mayoritaria del equipo de baloncesto profesional de Los Angeles Lakers, una franquicia de la National Basketball Association (NBA).</p>
+  </div>
+  </div>
+</div>
+
+<div class="w3-quarter">
+<div class="w3-card w3-white">
+  <img src="./images/lakers/pelinka.png" alt="Lights" style="width:100%">
+  <div class="w3-container">
+  <h3>Manager general</h3>
+  <h4>Rob Pelinka</h4>
+  <p>Robert Todd Pelinka Jr (nacido el 23 de diciembre de 1969) es un ejecutivo de baloncesto estadounidense, abogado, agente deportivo y ex jugador de baloncesto universitario de Lake Bluff, Illinois (suburbios de Chicago). Pelinka es actualmente vicepresidente de operaciones de baloncesto y gerente general de Los Angeles Lakers de la Asociación Nacional de Baloncesto (NBA).</p>
+  
+  </div>
+  </div>
+</div>
+
+<div class="w3-quarter">
+<div class="w3-card w3-white">
+  <img src="./images/lakers/Darvin-Ham.png" alt="Mountains" style="width:100%">
+  <div class="w3-container">
+  <h3>Entrenador</h3>
+  <h4>Darvin Ham</h4>
+  <p>Darvin Ham (23 de julio de 1973; Saginaw, Míchigan) es un exjugador y entrenador estadounidense que jugó 8 temporadas en la NBA. Con 2,01 metros de estatura, jugaba en la posición de alero. Desde 2022 es entrenador principal de Los Angeles Lakers. </p>
+  
+  </div>
+  </div>
+</div>
+
+</div>
+
+<!-- Image Header -->
+<div class="w3-display-container w3-animate-opacity">
+    <img src="./images/warriors/warriors.png" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
+    <div class="w3-container w3-display-bottomleft w3-margin-bottom w3-margin-left w3-margin-right w3-theme-d2 dcs-image-header-caption">
+      <p>Chase Center</p>
+    </div>
+  </div>
+  
+  <!-- Modal -->
+  <div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-card-4 w3-animate-top">
+      <header class="w3-container w3-indigo w3-display-container"> 
+        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-indigo w3-display-topright"><i class="fa fa-remove"></i></span>
+        <h4>Oh snap! We just showed you a modal..</h4>
+        <h5>Because we can <i class="fa fa-smile-o"></i></h5>
+      </header>
+      <div class="w3-container">
+        <p>Cool huh? Ok, enough teasing around..</p>
+        <p>Go to our <a class="w3-text-indigo" href="/w3css/default.asp">W3.CSS Tutorial</a> to learn more!</p>
+      </div>
+      <footer class="w3-container w3-indigo">
+        <p>Modal footer</p>
+      </footer>
+    </div>
+  </div>
+  
+  <!-- Team Container -->
+  <div class="w3-container w3-padding-32 w3-center" id="team">
+  <h2>Jugadores Importantes</h2>
+  <p>Conoce al equipo:</p>
+  
+  <div class="w3-row"><br>
+  
+  <div class="w3-quarter">
+    <img src=".//images/warriors/curry.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+    <h3>Stephen Curry</h3>
+    <p>Base</p>
+  </div>
+  
+  <div class="w3-quarter">
+    <img src="./images/warriors/klay.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+    <h3>Klay Thompson</h3>
+    <p>Alero</p>
+  </div>
+  
+  <div class="w3-quarter">
+    <img src="./images/warriors/wigggins.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+    <h3>Andrew Wiggins</h3>
+    <p>Alero</p>
+  </div>
+  
+  <div class="w3-quarter">
+      <img src="./images/warriors/draymond.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+      <h3>Draymond Green</h3>
+      <p>Pivot</p>
+    </div>
+  
+  </div>
+  </div>
+  
+  <!-- Work Row -->
+  <div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
+  
+  <div class="w3-quarter">
+  <h2>Franquicia</h2>
+  <p>Los Golden State Warriors son un equipo profesional de baloncesto de los Estados Unidos con sede en San Francisco, California. Compiten en la División Pacífico de la Conferencia Oeste de la National Basketball Association (NBA) y disputan sus partidos como locales en el Chase Center, ubicado en el barrio sanfranciscano de Mission Bay.</p>
+  </div>
+  
+  <div class="w3-quarter">
+  <div class="w3-card w3-white">
+    <img src="./images/warriors/joe-lacob.jpg" alt="Snow" style="width:100%">
+    <div class="w3-container">
+    <h3>Propietarios</h3>
+    <h4>Joe Lacob (Mayor parte) y Peter Guber</h4>
+    <p>Joseph Steven Lacob (nacido el 10 de enero de 1956) es un ejecutivo empresarial estadounidense, socio de Kleiner Perkins y propietario mayoritario de los Golden State Warriors de la Asociación Nacional de Baloncesto (NBA). </p>
+    </div>
+    </div>
+  </div>
+  
+  <div class="w3-quarter">
+  <div class="w3-card w3-white">
+    <img src="./images/warriors/Bob_Myers.jpg" alt="Lights" style="width:100%">
+    <div class="w3-container">
+    <h3>Manager general</h3>
+    <h4>Bob Myers</h4>
+    <p>Robert Michael Myers (nacido el 31 de marzo de 1975) es un ejecutivo de baloncesto, presidente de operaciones de baloncesto y director general de los Golden State Warriors de la Asociación Nacional de Baloncesto (NBA). Es un ex agente deportivo de Wasserman Media Group después de hacer una pasantía con el agente Arn Tellem. Myers jugó baloncesto universitario para los UCLA Bruins de 1993 a 1997. Fue miembro de su equipo campeón de la NCAA de 1995. Se desempeñó como comentarista de radio para el baloncesto de UCLA durante dos temporadas hasta 2002.</p>
+    
+    </div>
+    </div>
+  </div>
+  
+  <div class="w3-quarter">
+  <div class="w3-card w3-white">
+    <img src="./images/warriors/kerr.jpg" alt="Mountains" style="width:100%">
+    <div class="w3-container">
+    <h3>Entrenador</h3>
+    <h4>Steve Kerr</h4>
+    <p>Stephen Douglas "Steve" Kerr (Beirut, Líbano, 27 de septiembre de 1965) es un exjugador de baloncesto estadounidense y actual entrenador de los Golden State Warriors de la NBA. Con 1,91 metros altura, jugaba en el puesto de base/escolta. Como jugador fue campeón de la NBA en 5 ocasiones en dos equipos diferentes (Chicago Bulls y San Antonio Spurs) y como entrenador ha conseguido 4 títulos con los Golden State Warriors.  </p>
+    
+    </div>
+    </div>
+  </div>
+  
+  </div>
+
+
+  <!-- Image Header -->
+<div class="w3-display-container w3-animate-opacity">
+    <img src="./images/mavs/mavs.jpg" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
+    <div class="w3-container w3-display-bottomleft w3-margin-bottom w3-margin-left w3-margin-right w3-theme-d2 dcs-image-header-caption">
+      <p>American Airlines Center</p>
+    </div>
+  </div>
+  
+  <!-- Modal -->
+  <div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-card-4 w3-animate-top">
+      <header class="w3-container w3-indigo w3-display-container"> 
+        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-indigo w3-display-topright"><i class="fa fa-remove"></i></span>
+        <h4>Oh snap! We just showed you a modal..</h4>
+        <h5>Because we can <i class="fa fa-smile-o"></i></h5>
+      </header>
+      <div class="w3-container">
+        <p>Cool huh? Ok, enough teasing around..</p>
+        <p>Go to our <a class="w3-text-indigo" href="/w3css/default.asp">W3.CSS Tutorial</a> to learn more!</p>
+      </div>
+      <footer class="w3-container w3-indigo">
+        <p>Modal footer</p>
+      </footer>
+    </div>
+  </div>
+  
+  <!-- Team Container -->
+  <div class="w3-container w3-padding-32 w3-center" id="team">
+  <h2>Jugadores Importantes</h2>
+  <p>Conoce al equipo:</p>
+  
+  <div class="w3-row"><br>
+  
+  <div class="w3-quarter">
+    <img src="./images/mavs/doncic.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+    <h3>Luka Doncic</h3>
+    <p>Base</p>
+  </div>
+  
+  <div class="w3-quarter">
+    <img src="./images/mavs/kyrie.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+    <h3>Kyrie Irving</h3>
+    <p>Escolta</p>
+  </div>
+  
+  <div class="w3-quarter">
+    <img src="./images/mavs/hardaway.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+    <h3>Tim Hardaway Jr</h3>
+    <p>Alero</p>
+  </div>
+  
+  <div class="w3-quarter">
+      <img src="./images/mavs/wood.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+      <h3>Christian Wood</h3>
+      <p>Pivot</p>
+    </div>
+  
+  </div>
+  </div>
+  
+  <!-- Work Row -->
+  <div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
+  
+  <div class="w3-quarter">
+  <h2>Franquicia</h2>
+  <p>Los Dallas Mavericks, a menudo conocidos con la abreviatura Mavs, son un equipo profesional de baloncesto de los Estados Unidos con sede en Dallas, Texas. Compiten en la División Suroeste de la Conferencia Oeste de la National Basketball Association (NBA) y disputan sus partidos como locales en el American Airlines Center.</p>
+  </div>
+  
+  <div class="w3-quarter">
+  <div class="w3-card w3-white">
+    <img src="./images/mavs/Mark-Cuban.jpg" alt="Snow" style="width:100%">
+    <div class="w3-container">
+    <h3>Propietarios</h3>
+    <h4>Mark Cuban</h4>
+    <p>Mark Cuban (Pittsburgh, Pensilvania, 31 de julio de 1958) es un empresario estadounidense, inversor y dueño de los Mavericks de Dallas de la NBA. También es propietario de la empresa de cine y entretenimiento 2929 Entertainment. Es conocido por ser un inversor en la serie Shark Tank. En 2011, Mark escribió un libro titulado "Cómo ganar en el deporte de los negocios", en el que describe crónicas de sus experiencias en los negocios y en los deportes.</p>
+    </div>
+    </div>
+  </div>
+  
+  <div class="w3-quarter">
+  <div class="w3-card w3-white">
+    <img src="./images/mavs/harrison.jpg" alt="Lights" style="width:100%">
+    <div class="w3-container">
+    <h3>Manager general</h3>
+    <h4>Nico Harrison</h4>
+    <p>Nico Tyrone Harrison (nacido el 28 de diciembre de 1972) es un ejecutivo de baloncesto profesional estadounidense de la Asociación Nacional de Baloncesto (NBA), que actualmente es presidente de operaciones de baloncesto y director general de los Dallas Mavericks.</p>
+    
+    </div>
+    </div>
+  </div>
+  
+  <div class="w3-quarter">
+  <div class="w3-card w3-white">
+    <img src="./images/mavs/kidd.jpg" alt="Mountains" style="width:100%">
+    <div class="w3-container">
+    <h3>Entrenador</h3>
+    <h4>Jason Kidd</h4>
+    <p>Jason Frederick Kidd (San Francisco, California, 23 de marzo de 1973) es un entrenador y exjugador de baloncesto estadounidense que en la actualidad entrena al equipo de la NBA Dallas Mavericks. Como jugador disputó 19 temporadas en la NBA. Con 1,93 metros de altura jugaba en la posición de base. En 2011 ganó el campeonato de la NBA con Dallas Mavericks, es el segundo máximo asistente de la historia de la NBA y en 2018 fue incluido en el Basketball Hall of Fame.</p>
+    
+    </div>
+    </div>
+  </div>
+  
+  </div>
+  
+
+
+  <!-- Image Header -->
+  <div class="w3-display-container w3-animate-opacity">
+    <img src="./images/grizzlies/grizzlies.jpg" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
+    <div class="w3-container w3-display-bottomleft w3-margin-bottom w3-margin-left w3-margin-right w3-theme-d2 dcs-image-header-caption">
+      <p>FedExForum</p>
+    </div>
+  </div>
+  
+  <!-- Modal -->
+  <div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-card-4 w3-animate-top">
+      <header class="w3-container w3-indigo w3-display-container"> 
+        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-indigo w3-display-topright"><i class="fa fa-remove"></i></span>
+        <h4>Oh snap! We just showed you a modal..</h4>
+        <h5>Because we can <i class="fa fa-smile-o"></i></h5>
+      </header>
+      <div class="w3-container">
+        <p>Cool huh? Ok, enough teasing around..</p>
+        <p>Go to our <a class="w3-text-indigo" href="/w3css/default.asp">W3.CSS Tutorial</a> to learn more!</p>
+      </div>
+      <footer class="w3-container w3-indigo">
+        <p>Modal footer</p>
+      </footer>
+    </div>
+  </div>
+  
+  <!-- Team Container -->
+  <div class="w3-container w3-padding-32 w3-center" id="team">
+  <h2>Jugadores Importantes</h2>
+  <p>Conoce al equipo:</p>
+  
+  <div class="w3-row"><br>
+  
+  <div class="w3-quarter">
+    <img src="./images/grizzlies/morant.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+    <h3>Ja Morant</h3>
+    <p>Base</p>
+  </div>
+  
+  <div class="w3-quarter">
+    <img src="./images/grizzlies/bane.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+    <h3>Desmond Bane</h3>
+    <p>Escolta</p>
+  </div>
+  
+  <div class="w3-quarter">
+    <img src="./images/grizzlies/brooks.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+    <h3>Dillon Brooks</h3>
+    <p>Alero</p>
+  </div>
+  
+  <div class="w3-quarter">
+      <img src="./images/grizzlies/jaren.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+      <h3>Jaren Jackson Jr</h3>
+      <p>Ala-Pivot</p>
+    </div>
+  
+  </div>
+  </div>
+  
+  <!-- Work Row -->
+  <div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
+  
+  <div class="w3-quarter">
+  <h2>Franquicia</h2>
+  <p>Los Memphis Grizzlies son un equipo profesional de baloncesto de los Estados Unidos con sede en Memphis, Tennessee. Compiten en la División Suroeste de la Conferencia Oeste de la National Basketball Association (NBA) y disputan sus partidos como locales en el FedExForum. </p>
+  </div>
+  
+  <div class="w3-quarter">
+  <div class="w3-card w3-white">
+    <img src="./images/grizzlies/pera.jpg" alt="Snow" style="width:100%">
+    <div class="w3-container">
+    <h3>Propietarios</h3>
+    <h4>Robert Pera</h4>
+    <p>Robert J. Pera (nacido el 10 de marzo de 1978) es el fundador de Ubiquiti Networks, Inc., una empresa global de tecnología de comunicaciones que Pera hizo pública en 2011. En octubre de 2012, Pera también se convirtió en propietario de los Memphis Grizzlies de la Asociación Nacional de Baloncesto. . A la edad de 36 años, Pera se ganó un lugar en la lista de Forbes de los 10 multimillonarios más jóvenes del mundo.</p>
+    </div>
+    </div>
+  </div>
+  
+  <div class="w3-quarter">
+  <div class="w3-card w3-white">
+    <img src="./images/grizzlies/wexler.jpeg" alt="Lights" style="width:100%">
+    <div class="w3-container">
+    <h3>Manager general</h3>
+    <h4>Jason Wexler</h4>
+    <p>Jason Wexler inicia su séptima temporada con los Memphis Grizzlies y FedExForum y la segunda como presidente. Wexler tiene la responsabilidad de liderazgo en Operaciones Comerciales y Operaciones de Baloncesto. Wexler fue anteriormente presidente de operaciones comerciales y se unió a la organización como director de operaciones en abril de 2013.</p>
+    
+    </div>
+    </div>
+  </div>
+  
+  <div class="w3-quarter">
+  <div class="w3-card w3-white">
+    <img src="./images/grizzlies/jenkinsjpg.jpg" alt="Mountains" style="width:100%">
+    <div class="w3-container">
+    <h3>Entrenador</h3>
+    <h4>Taylor Jenkins</h4>
+    <p>Taylor Jenkins (Arlington, Texas; 19 de septiembre de 1984) es un entrenador de baloncesto estadounidense que actualmente dirige al los Memphis Grizzlies de la NBA. </p>
+    
+    </div>
+    </div>
+  </div>
+  
+  </div>
+
+
+  
+  <!-- Container -->
+  <div class="w3-container" style="position:relative">
+    <a onclick="w3_open()" class="w3-button w3-xlarge w3-circle w3-indigo"
+    style="position:absolute;top:-28px;right:24px">+</a>
+  </div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+  <h4>Follow Us</h4>
+  <a class="w3-button w3-large w3-indigo" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
+  <a class="w3-button w3-large w3-indigo" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
+  <a class="w3-button w3-large w3-indigo" href="javascript:void(0)" title="Google +"><i class="fa fa-google-plus"></i></a>
+  <a class="w3-button w3-large w3-indigo" href="javascript:void(0)" title="Google +"><i class="fa fa-instagram"></i></a>
+  <a class="w3-button w3-large w3-indigo w3-hide-small" href="javascript:void(0)" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+
+  <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-padding w3-indigo w3-hide-small">Go To Top</span>   
+    <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>
+</footer>
+
+<script>
+// Script for side navigation
+function w3_open() {
+  var x = document.getElementById("mySidebar");
+  x.style.width = "300px";
+  x.style.paddingTop = "10%";
+  x.style.display = "block";
+}
+
+// Close side navigation
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>

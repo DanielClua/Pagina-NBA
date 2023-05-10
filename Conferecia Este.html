@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Custom styles -->
+<link rel="stylesheet" href="./css/custom-styles.css">
+
+</head>
+<body id="myPage">
+
+<!-- Sidebar on click -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-xxlarge" style="display:none;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-display-topright w3-text-indigo w3-text-indigo">Close
+    <i class="fa fa-remove"></i>
+  </a>
+  <a href="#" class="w3-bar-item w3-button">Link 1</a>
+  <a href="#" class="w3-bar-item w3-button">Link 2</a>
+  <a href="#" class="w3-bar-item w3-button">Link 3</a>
+  <a href="#" class="w3-bar-item w3-button">Link 4</a>
+  <a href="#" class="w3-bar-item w3-button">Link 5</a>
+</nav>
+
+<!-- Navbar -->
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="./index.html" class="w3-bar-item w3-button w3-hover-white"><i class="fa fa-home w3-margin-right"></i>Inicio</a>
+  <a href="./objetivos.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Objetivos</a>
+  <a href="./datos.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Datos</a>
+  <a href="./mapas.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Mapas</a>
+  <a href="./contact.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contacto</a>
+  <div class="w3-dropdown-hover w3-hide-small">
+    <button class="w3-button" title="Notifications">Conferencias <i class="fa fa-caret-down"></i></button>     
+    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+      <a href="#" class="w3-bar-item w3-button w3-indigo">Conferencia Este</a>
+      <a href="./Conferecia Oeste.html" class="w3-bar-item w3-button">Conferencia Oeste</a>
+    </div>
+  </div>
+ </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+    <a href="./objetivos.html" class="w3-bar-item w3-button">Objetivos</a>
+    <a href="./datos.html" class="w3-bar-item w3-button">Datos</a>
+    <a href="./mapas.html" class="w3-bar-item w3-button">Mapas</a>
+    <a href="#" class="w3-bar-item w3-button">Conferencia Este</a>
+    <a href="./Conferecia Oeste.html" class="w3-bar-item w3-button">Conferencia Oeste</a>
+    <a href="./contact.html" class="w3-bar-item w3-button">Contacto</a>
+  </div>
+</div>
+
+<!-- Image Header -->
+<div class="w3-display-container w3-animate-opacity">
+  <img src="./images/celtics/celtics.jpg" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
+  <div class="w3-container w3-display-bottomleft w3-margin-bottom w3-margin-left w3-margin-right w3-theme-d2 dcs-image-header-caption">
+    <p>TD Garden</p>
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="id01" class="w3-modal">
+  <div class="w3-modal-content w3-card-4 w3-animate-top">
+    <header class="w3-container w3-indigo w3-display-container"> 
+      <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-indigo w3-display-topright"><i class="fa fa-remove"></i></span>
+      <h4>Oh snap! We just showed you a modal..</h4>
+      <h5>Because we can <i class="fa fa-smile-o"></i></h5>
+    </header>
+    <div class="w3-container">
+      <p>Cool huh? Ok, enough teasing around..</p>
+      <p>Go to our <a class="w3-text-indigo" href="/w3css/default.asp">W3.CSS Tutorial</a> to learn more!</p>
+    </div>
+    <footer class="w3-container w3-indigo">
+      <p>Modal footer</p>
+    </footer>
+  </div>
+</div>
+
+<!-- Team Container -->
+<div class="w3-container w3-padding-32 w3-center" id="team">
+<h2>Jugadores Importantes</h2>
+<p>Conoce al equipo:</p>
+
+<div class="w3-row"><br>
+
+<div class="w3-quarter">
+  <img src="./images/celtics/smart.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Marcus Smart</h3>
+  <p>Base</p>
+</div>
+
+<div class="w3-quarter">
+  <img src="./images/celtics/brown.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Jalen Brown</h3>
+  <p>Escolta</p>
+</div>
+
+<div class="w3-quarter">
+  <img src="./images/celtics/tatum.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Jason Tatum</h3>
+  <p>Alero</p>
+</div>
+
+<div class="w3-quarter">
+    <img src="./images/celtics/horford.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+    <h3>Al Horford</h3>
+    <p>Pivot</p>
+  </div>
+
+</div>
+</div>
+
+<!-- Work Row -->
+<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
+
+<div class="w3-quarter">
+<h2>Franquicia</h2>
+<p>Los Boston Celtics son un equipo profesional de baloncesto de los Estados Unidos con sede en Boston, Massachusetts. Compiten en la División Atlántico de la Conferencia Este de la National Basketball Association (NBA) y disputan sus partidos como locales en el TD Garden.</p>
+</div>
+
+<div class="w3-quarter">
+<div class="w3-card w3-white">
+  <img src="./images/celtics/propietarios.jpg" alt="Snow" style="width:100%">
+  <div class="w3-container">
+  <h3>Propietario</h3>
+  <h4>Boston Basketball Partners</h4>
+  <p>Boston Basketball Partners L.L.C. es un grupo de inversión privado local estadounidense formado para comprar los Boston Celtics de la Asociación Nacional de Baloncesto (NBA).
+
+    El comité ejecutivo está formado por los cuatro miembros del consejo de administración, Wyc Grousbeck, H. Irving Grousbeck, Stephen Pagliuca y The Abbey Group, representado por Robert Epstein con las incorporaciones de Paul Edgerley, Glenn Hutchins y James Pallotta. Otras nuevas incorporaciones clave incluyen a Matt Levin, director gerente de Bain Capital Partners.</p>
+  </div>
+  </div>
+</div>
+
+<div class="w3-quarter">
+<div class="w3-card w3-white">
+  <img src="./images/celtics/brad_stevens.jpeg" alt="Lights" style="width:100%">
+  <div class="w3-container">
+  <h3>Manager general</h3>
+  <h4>Brad Stevens</h4>
+  <p>Brad Stevens (nacido el 22 de octubre de 1976 en Zionsville, Indiana) es un entrenador de baloncesto estadounidense que actualmente ejerce como presidente de operaciones en los Boston Celtics de la NBA. </p>
+  
+  </div>
+  </div>
+</div>
+
+<div class="w3-quarter">
+<div class="w3-card w3-white">
+  <img src="./images/celtics/joe.jpg" alt="Mountains" style="width:100%">
+  <div class="w3-container">
+  <h3>Entrenador</h3>
+  <h4>Joseph Mazzulla</h4>
+  <p>Joseph Mazzulla (nacido el 30 de junio de 1988) es un entrenador de baloncesto profesional estadounidense que es el entrenador en jefe de los Boston Celtics de la Asociación Nacional de Baloncesto (NBA). Jugó baloncesto universitario para la Universidad de West Virginia.</p>
+  
+  </div>
+  </div>
+</div>
+
+</div>
+
+<!-- Image Header -->
+<div class="w3-display-container w3-animate-opacity">
+    <img src="./images/atlanta/atlanta.jpeg" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
+    <div class="w3-container w3-display-bottomleft w3-margin-bottom w3-margin-left w3-margin-right w3-theme-d2 dcs-image-header-caption">
+      <p>State Farm Arena</p>
+    </div>
+  </div>
+  
+  <!-- Modal -->
+  <div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-card-4 w3-animate-top">
+      <header class="w3-container w3-indigo w3-display-container"> 
+        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-indigo w3-display-topright"><i class="fa fa-remove"></i></span>
+        <h4>Oh snap! We just showed you a modal..</h4>
+        <h5>Because we can <i class="fa fa-smile-o"></i></h5>
+      </header>
+      <div class="w3-container">
+        <p>Cool huh? Ok, enough teasing around..</p>
+        <p>Go to our <a class="w3-text-indigo" href="/w3css/default.asp">W3.CSS Tutorial</a> to learn more!</p>
+      </div>
+      <footer class="w3-container w3-indigo">
+        <p>Modal footer</p>
+      </footer>
+    </div>
+  </div>
+  
+  <!-- Team Container -->
+  <div class="w3-container w3-padding-32 w3-center" id="team">
+  <h2>Jugadores Importantes</h2>
+  <p>Conoce al equipo:</p>
+  
+  <div class="w3-row"><br>
+  
+  <div class="w3-quarter">
+    <img src="./images/atlanta/young.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+    <h3>Trae Young</h3>
+    <p>Base</p>
+  </div>
+  
+  <div class="w3-quarter">
+    <img src="./images/atlanta/murray.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+    <h3>Dejounte Murray</h3>
+    <p>Base</p>
+  </div>
+  
+  <div class="w3-quarter">
+    <img src="./images/atlanta/collins.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+    <h3>John Collins</h3>
+    <p>Ala-Pivot</p>
+  </div>
+  
+  <div class="w3-quarter">
+      <img src="./images/atlanta/capela.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+      <h3>Clint Kapela</h3>
+      <p>Pivot</p>
+    </div>
+  
+  </div>
+  </div>
+  
+  <!-- Work Row -->
+  <div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
+  
+  <div class="w3-quarter">
+  <h2>Franquicia</h2>
+  <p>Los Atlanta Hawks son un equipo profesional de baloncesto de los Estados Unidos con sede en Atlanta, Georgia. Compiten en la División Sureste de la Conferencia Este de la National Basketball Association (NBA) y disputan sus partidos como locales en el State Farm Arena.</p>
+  </div>
+  
+  <div class="w3-quarter">
+  <div class="w3-card w3-white">
+    <img src="./images/atlanta/ressler.png" alt="Snow" style="width:100%">
+    <div class="w3-container">
+    <h3>Propietarios</h3>
+    <h4>Tony Ressler</h4>
+    <p>Antony P. Ressler (nacido el 12 de octubre de 1960) es un administrador de fondos de cobertura multimillonario estadounidense y propietario de un equipo deportivo. Cofundó las firmas de capital privado Apollo Global Management en 1990 y Ares Management en 1997. En julio de 2022, Forbes estimó su patrimonio neto en $ 5.2 mil millones.</p>
+    </div>
+    </div>
+  </div>
+  
+  <div class="w3-quarter">
+  <div class="w3-card w3-white">
+    <img src="./images/atlanta/fields.jpeg" alt="Lights" style="width:100%">
+    <div class="w3-container">
+    <h3>Manager general</h3>
+    <h4>Landry Fields</h4>
+    <p>Landry Fields (nacido el 27 de junio de 1988 en Long Beach, California) es un exjugador de baloncesto estadounidense que disputó 5 temporadas en la NBA. Con 2,01 metros de estatura, jugaba en las posiciones de alero y escolta. Desde diciembre de 2022 es presidente de operaciones deportivas de los Atlanta Hawks.</p>
+    
+    </div>
+    </div>
+  </div>
+  
+  <div class="w3-quarter">
+  <div class="w3-card w3-white">
+    <img src="./images/atlanta/snyder.jpg" alt="Mountains" style="width:100%">
+    <div class="w3-container">
+    <h3>Entrenador</h3>
+    <h4>Price Snyder</h4>
+    <p>Quin Price Snyder (nacido el 30 de octubre de 1966 en Mercer Island, Washington) es un exjugador y entrenador de baloncesto estadounidense que actualmente entrena a los Atlanta Hawks de la NBA.</p>
+    
+    </div>
+    </div>
+  </div>
+  
+  </div>
+
+
+  <!-- Image Header -->
+<div class="w3-display-container w3-animate-opacity">
+    <img src="./images/bulls/bulls.jpeg" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
+    <div class="w3-container w3-display-bottomleft w3-margin-bottom w3-margin-left w3-margin-right w3-theme-d2 dcs-image-header-caption">
+      <p>United Center</p>
+    </div>
+  </div>
+  
+  <!-- Modal -->
+  <div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-card-4 w3-animate-top">
+      <header class="w3-container w3-indigo w3-display-container"> 
+        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-indigo w3-display-topright"><i class="fa fa-remove"></i></span>
+        <h4>Oh snap! We just showed you a modal..</h4>
+        <h5>Because we can <i class="fa fa-smile-o"></i></h5>
+      </header>
+      <div class="w3-container">
+        <p>Cool huh? Ok, enough teasing around..</p>
+        <p>Go to our <a class="w3-text-indigo" href="/w3css/default.asp">W3.CSS Tutorial</a> to learn more!</p>
+      </div>
+      <footer class="w3-container w3-indigo">
+        <p>Modal footer</p>
+      </footer>
+    </div>
+  </div>
+  
+  <!-- Team Container -->
+  <div class="w3-container w3-padding-32 w3-center" id="team">
+  <h2>Jugadores Importantes</h2>
+  <p>Conoce al equipo:</p>
+  
+  <div class="w3-row"><br>
+  
+  <div class="w3-quarter">
+    <img src="./images/bulls/caruso.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+    <h3>Alex Caruso</h3>
+    <p>Base</p>
+  </div>
+  
+  <div class="w3-quarter">
+    <img src="./images/bulls/iderozan.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+    <h3>Demar DeRozan</h3>
+    <p>Escolta</p>
+  </div>
+  
+  <div class="w3-quarter">
+    <img src="./images/bulls/lavine.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+    <h3>Zach Lavine</h3>
+    <p>Alero</p>
+  </div>
+  
+  <div class="w3-quarter">
+      <img src="./images/bulls/vucevic.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+      <h3>Nicola Vucevic</h3>
+      <p>Pivot</p>
+    </div>
+  
+  </div>
+  </div>
+  
+  <!-- Work Row -->
+  <div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
+  
+  <div class="w3-quarter">
+  <h2>Franquicia</h2>
+  <p>Los Chicago Bulls (en idioma español: Toros de Chicago) son un equipo profesional de baloncesto de los Estados Unidos con sede en Chicago, Illinois. Compiten en la División Central de la Conferencia Este de la National Basketball Association (NBA) y disputan sus partidos como locales en el United Center.</p>
+  </div>
+  
+  <div class="w3-quarter">
+  <div class="w3-card w3-white">
+    <img src="./images/bulls/jerry-reinsdorf.jpg"  alt="Snow" style="width:100%">
+    <div class="w3-container">
+    <h3>Propietario</h3>
+    <h4>Jerry Reinsdorf</h4>
+    <p>Jerry Michael Reinsdorf (Brooklyn, Nueva York; 25 de febrero de 1936) es un contador público y abogado estadounidense, conocido por ser el propietario de los Chicago Bulls de la NBA y los Chicago White Sox de la MLB. Comenzó su vida profesional como fiscal en el Servicio de Impuestos Internos y ha sido el jefe de los White Sox y Bulls durante más de 35 años.</p>
+    </div>
+    </div>
+  </div>
+  
+  <div class="w3-quarter">
+  <div class="w3-card w3-white">
+    <img src="./images/bulls/eversley.jpg" alt="Lights" style="width:100%">
+    <div class="w3-container">
+    <h3>Manager general</h3>
+    <h4>Marc Eversley</h4>
+    <p>Marc Eversley (nacido en 1969) es el gerente general de los Chicago Bulls de la Asociación Nacional de Baloncesto.</p>
+    
+    </div>
+    </div>
+  </div>
+  
+  <div class="w3-quarter">
+  <div class="w3-card w3-white">
+    <img src="./images/bulls/donovan.jpeg" alt="Mountains" style="width:100%">
+    <div class="w3-container">
+    <h3>Entrenador</h3>
+    <h4>William Donovan</h4>
+    <p>William John "Billy" Donovan Jr. (nacido el 30 de mayo de 1965 en Rockville Centre, Nueva York) es un exjugador y entrenador de baloncesto estadounidense que disputó una temporada en la NBA. Con 1,80 metros de estatura, jugaba en la posición de base. Actualmente es el entrenador de los Chicago Bulls de la NBA. Es una de las únicas cuatro personas (los otros tres son Dean Smith, Joe B. Hall y Bobby Knight) en disputar una Final Four de la NCAA como jugador y ganar un Torneo de la NCAA como entrenador.</p>
+    
+    </div>
+    </div>
+  </div>
+  
+  </div>
+  
+
+   <!-- Image Header -->
+<div class="w3-display-container w3-animate-opacity">
+  <img src="./images/miami/heat.jpeg" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
+  <div class="w3-container w3-display-bottomleft w3-margin-bottom w3-margin-left w3-margin-right w3-theme-d2 dcs-image-header-caption">
+    <p>Miami Dade Arena</p>
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="id01" class="w3-modal">
+  <div class="w3-modal-content w3-card-4 w3-animate-top">
+    <header class="w3-container w3-indigo w3-display-container"> 
+      <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-indigo w3-display-topright"><i class="fa fa-remove"></i></span>
+      <h4>Oh snap! We just showed you a modal..</h4>
+      <h5>Because we can <i class="fa fa-smile-o"></i></h5>
+    </header>
+    <div class="w3-container">
+      <p>Cool huh? Ok, enough teasing around..</p>
+      <p>Go to our <a class="w3-text-indigo" href="/w3css/default.asp">W3.CSS Tutorial</a> to learn more!</p>
+    </div>
+    <footer class="w3-container w3-indigo">
+      <p>Modal footer</p>
+    </footer>
+  </div>
+</div>
+
+<!-- Team Container -->
+<div class="w3-container w3-padding-32 w3-center" id="team">
+<h2>Jugadores Importantes</h2>
+<p>Conoce al equipo:</p>
+
+<div class="w3-row"><br>
+
+<div class="w3-quarter">
+  <img src="./images/miami/lowry.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Kyle Lowry</h3>
+  <p>Base</p>
+</div>
+
+<div class="w3-quarter">
+  <img src="./images/miami/herro.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Tyler Herro</h3>
+  <p>Base</p>
+</div>
+
+<div class="w3-quarter">
+  <img src="./images/miami/butler.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Jimmy Butler</h3>
+  <p>Ala-Pivot</p>
+</div>
+
+<div class="w3-quarter">
+    <img src="./images/miami/adebayo.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+    <h3>Bam Adebayo</h3>
+    <p>Pivot</p>
+  </div>
+
+</div>
+</div>
+
+<!-- Work Row -->
+<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
+
+<div class="w3-quarter">
+<h2>Franquicia</h2>
+<p>Los Miami Heat (en español, Calor de Miami) son un equipo profesional de baloncesto de los Estados Unidos con sede en Miami, Florida. Compiten en la División Sureste de la Conferencia Este de la National Basketball Association (NBA) y disputan sus partidos como locales en el Miami Dade Arena.</p>
+</div>
+
+<div class="w3-quarter">
+<div class="w3-card w3-white">
+  <img src="./images/miami/arison.jpg"  alt="Snow" style="width:100%">
+  <div class="w3-container">
+  <h3>Propietario</h3>
+  <h4>Micky Arison</h4>
+  <p>Micky Arison (Tel Aviv, 29 de junio de 1949) es un empresario y multimillonario israelí-estadounidense. Es el presidente de Carnival Corporation, el operador de cruceros más grande del mundo. Desde 1979 hasta 2013, también se desempeñó como CEO hasta que fue reemplazado en junio de 2013 por Arnold W. Donald, quien había sido miembro del directorio de la compañía durante 12 años. Arison también es el dueño del equipo Miami Heat de la NBA.</p>
+  </div>
+  </div>
+</div>
+
+<div class="w3-quarter">
+<div class="w3-card w3-white">
+  <img src="./images/miami/elisburg.jpeg" alt="Lights" style="width:100%">
+  <div class="w3-container">
+  <h3>Manager general</h3>
+  <h4>Andy Elisburg </h4>
+  <p>Andy Elisburg es vicepresidente senior de operaciones de baloncesto y gerente general del Miami Heat desde 2013.</p>
+  
+  </div>
+  </div>
+</div>
+
+<div class="w3-quarter">
+<div class="w3-card w3-white">
+  <img src="./images/miami/spoelstra.jpeg" alt="Mountains" style="width:100%">
+  <div class="w3-container">
+  <h3>Entrenador</h3>
+  <h4>Erik Spoelstra</h4>
+  <p>Erik Spoelstra Celino (Evanston, Illinois, 1 de noviembre de 1970) es un entrenador de baloncesto estadounidense que dirige desde 2008 a los Miami Heat de la NBA (con anterioridad fue en este mismo equipo entrenador asistente y director de scouting). Es el primer técnico filipino-estadounidense en esta liga.​ </p>
+  
+  </div>
+  </div>
+</div>
+
+</div>
+
+
+
+
+
+  
+  <!-- Container -->
+  <div class="w3-container" style="position:relative">
+    <a onclick="w3_open()" class="w3-button w3-xlarge w3-circle w3-indigo"
+    style="position:absolute;top:-28px;right:24px">+</a>
+  </div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+  <h4>Follow Us</h4>
+  <a class="w3-button w3-large w3-indigo" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
+  <a class="w3-button w3-large w3-indigo" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
+  <a class="w3-button w3-large w3-indigo" href="javascript:void(0)" title="Google +"><i class="fa fa-google-plus"></i></a>
+  <a class="w3-button w3-large w3-indigo" href="javascript:void(0)" title="Google +"><i class="fa fa-instagram"></i></a>
+  <a class="w3-button w3-large w3-indigo w3-hide-small" href="javascript:void(0)" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+
+  <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-padding w3-indigo w3-hide-small">Go To Top</span>   
+    <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>
+</footer>
+
+<script>
+// Script for side navigation
+function w3_open() {
+  var x = document.getElementById("mySidebar");
+  x.style.width = "300px";
+  x.style.paddingTop = "10%";
+  x.style.display = "block";
+}
+
+// Close side navigation
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>
