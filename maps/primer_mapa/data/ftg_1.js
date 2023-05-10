@@ -1,0 +1,1 @@
+var json_ftg_1 = {"type":"FeatureCollection","name":"ftg_1","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"fid":"1","id":"URV","Municipio":"Vila-seca"},"geometry":{"type":"Point","coordinates":[1.148019388014025,41.102924019036003]}}]}
