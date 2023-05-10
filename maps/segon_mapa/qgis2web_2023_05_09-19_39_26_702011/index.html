@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="css/leaflet.css">
+        <link rel="stylesheet" href="css/qgis2web.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
+        <style>
+        #map {
+            width: 1277px;
+            height: 778px;
+        }
+        </style>
+        <title></title>
+    </head>
+    <body>
+        <div id="map">
+        </div>
+        <script src="js/qgis2web_expressions.js"></script>
+        <script src="js/leaflet.js"></script>
+        <script src="js/leaflet.rotatedMarker.js"></script>
+        <script src="js/leaflet.pattern.js"></script>
+        <script src="js/leaflet-hash.js"></script>
+        <script src="js/Autolinker.min.js"></script>
+        <script src="js/rbush.min.js"></script>
+        <script src="js/labelgun.min.js"></script>
+        <script src="js/labels.js"></script>
+        <script src="data/grizzlies_1.js"></script>
+        <script src="data/lakers_2.js"></script>
+        <script src="data/mavs_3.js"></script>
+        <script src="data/warriors_4.js"></script>
+        <script>
+        var map = L.map('map', {
+            zoomControl:true, maxZoom:28, minZoom:1
+        }).fitBounds([[0.6302427192518074,-142.28482088973237],[54.60203966145319,-53.606932872584586]]);
+        var hash = new L.Hash(map);
+        map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
+        var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
+        var bounds_group = new L.featureGroup([]);
+        function setBounds() {
+        }
+        map.createPane('pane_GoogleSatellite_0');
+        map.getPane('pane_GoogleSatellite_0').style.zIndex = 400;
+        var layer_GoogleSatellite_0 = L.tileLayer('https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
+            pane: 'pane_GoogleSatellite_0',
+            opacity: 1.0,
+            attribution: '',
+            minZoom: 1,
+            maxZoom: 28,
+            minNativeZoom: 0,
+            maxNativeZoom: 19
+        });
+        layer_GoogleSatellite_0;
+        map.addLayer(layer_GoogleSatellite_0);
+        function pop_grizzlies_1(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">id</th>\
+                        <td>' + (feature.properties['id'] !== null ? autolinker.link(feature.properties['id'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">nombre</th>\
+                        <td>' + (feature.properties['nombre'] !== null ? autolinker.link(feature.properties['nombre'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Dirección</th>\
+                        <td>' + (feature.properties['Dirección'] !== null ? autolinker.link(feature.properties['Dirección'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Cpacidad</th>\
+                        <td>' + (feature.properties['Cpacidad'] !== null ? autolinker.link(feature.properties['Cpacidad'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Superficie</th>\
+                        <td>' + (feature.properties['Superficie'] !== null ? autolinker.link(feature.properties['Superficie'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_grizzlies_1_0() {
+            return {
+                pane: 'pane_grizzlies_1',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/memphis-grizzlies-logo.svg',
+            iconSize: [57.0, 57.0]
+        }),
+                interactive: true,
+            }
+        }
+        map.createPane('pane_grizzlies_1');
+        map.getPane('pane_grizzlies_1').style.zIndex = 401;
+        map.getPane('pane_grizzlies_1').style['mix-blend-mode'] = 'normal';
+        var layer_grizzlies_1 = new L.geoJson(json_grizzlies_1, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_grizzlies_1',
+            layerName: 'layer_grizzlies_1',
+            pane: 'pane_grizzlies_1',
+            onEachFeature: pop_grizzlies_1,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.marker(latlng, style_grizzlies_1_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_grizzlies_1);
+        map.addLayer(layer_grizzlies_1);
+        function pop_lakers_2(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">id</th>\
+                        <td>' + (feature.properties['id'] !== null ? autolinker.link(feature.properties['id'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">nombre</th>\
+                        <td>' + (feature.properties['nombre'] !== null ? autolinker.link(feature.properties['nombre'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Dirección</th>\
+                        <td>' + (feature.properties['Dirección'] !== null ? autolinker.link(feature.properties['Dirección'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Capacidad</th>\
+                        <td>' + (feature.properties['Capacidad'] !== null ? autolinker.link(feature.properties['Capacidad'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Superficie</th>\
+                        <td>' + (feature.properties['Superficie'] !== null ? autolinker.link(feature.properties['Superficie'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_lakers_2_0() {
+            return {
+                pane: 'pane_lakers_2',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/2560px-Los_Angeles_Lakers_logo.svg',
+            iconSize: [57.0, 57.0]
+        }),
+                interactive: true,
+            }
+        }
+        map.createPane('pane_lakers_2');
+        map.getPane('pane_lakers_2').style.zIndex = 402;
+        map.getPane('pane_lakers_2').style['mix-blend-mode'] = 'normal';
+        var layer_lakers_2 = new L.geoJson(json_lakers_2, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_lakers_2',
+            layerName: 'layer_lakers_2',
+            pane: 'pane_lakers_2',
+            onEachFeature: pop_lakers_2,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.marker(latlng, style_lakers_2_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_lakers_2);
+        map.addLayer(layer_lakers_2);
+        function pop_mavs_3(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">id</th>\
+                        <td>' + (feature.properties['id'] !== null ? autolinker.link(feature.properties['id'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">nombre</th>\
+                        <td>' + (feature.properties['nombre'] !== null ? autolinker.link(feature.properties['nombre'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Dirección</th>\
+                        <td>' + (feature.properties['Dirección'] !== null ? autolinker.link(feature.properties['Dirección'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Capacidad</th>\
+                        <td>' + (feature.properties['Capacidad'] !== null ? autolinker.link(feature.properties['Capacidad'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Superficie</th>\
+                        <td>' + (feature.properties['Superficie'] !== null ? autolinker.link(feature.properties['Superficie'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_mavs_3_0() {
+            return {
+                pane: 'pane_mavs_3',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/dallas-mavericks-logo-1.svg',
+            iconSize: [57.0, 57.0]
+        }),
+                interactive: true,
+            }
+        }
+        map.createPane('pane_mavs_3');
+        map.getPane('pane_mavs_3').style.zIndex = 403;
+        map.getPane('pane_mavs_3').style['mix-blend-mode'] = 'normal';
+        var layer_mavs_3 = new L.geoJson(json_mavs_3, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_mavs_3',
+            layerName: 'layer_mavs_3',
+            pane: 'pane_mavs_3',
+            onEachFeature: pop_mavs_3,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.marker(latlng, style_mavs_3_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_mavs_3);
+        map.addLayer(layer_mavs_3);
+        function pop_warriors_4(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">id</th>\
+                        <td>' + (feature.properties['id'] !== null ? autolinker.link(feature.properties['id'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">nombre</th>\
+                        <td>' + (feature.properties['nombre'] !== null ? autolinker.link(feature.properties['nombre'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Dirección</th>\
+                        <td>' + (feature.properties['Dirección'] !== null ? autolinker.link(feature.properties['Dirección'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Capacidad</th>\
+                        <td>' + (feature.properties['Capacidad'] !== null ? autolinker.link(feature.properties['Capacidad'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Superficie</th>\
+                        <td>' + (feature.properties['Superficie'] !== null ? autolinker.link(feature.properties['Superficie'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_warriors_4_0() {
+            return {
+                pane: 'pane_warriors_4',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/tinywow_golden-state-warriors-logo-1-1_22485828.svg',
+            iconSize: [57.0, 57.0]
+        }),
+                interactive: true,
+            }
+        }
+        map.createPane('pane_warriors_4');
+        map.getPane('pane_warriors_4').style.zIndex = 404;
+        map.getPane('pane_warriors_4').style['mix-blend-mode'] = 'normal';
+        var layer_warriors_4 = new L.geoJson(json_warriors_4, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_warriors_4',
+            layerName: 'layer_warriors_4',
+            pane: 'pane_warriors_4',
+            onEachFeature: pop_warriors_4,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.marker(latlng, style_warriors_4_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_warriors_4);
+        map.addLayer(layer_warriors_4);
+        var baseMaps = {};
+        L.control.layers(baseMaps,{'<img src="legend/warriors_4.png" /> warriors': layer_warriors_4,'<img src="legend/mavs_3.png" /> mavs': layer_mavs_3,'<img src="legend/lakers_2.png" /> lakers': layer_lakers_2,'<img src="legend/grizzlies_1.png" /> grizzlies': layer_grizzlies_1,"Google Satellite": layer_GoogleSatellite_0,}).addTo(map);
+        setBounds();
+        </script>
+    </body>
+</html>
